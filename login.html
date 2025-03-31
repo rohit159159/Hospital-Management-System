@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LetCare login </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+       <!--header section starts -->
+       <div class="background">
+        <header class="header">
+            <img src="assets/logoo.png" alt="">
+            <a href="#" class="logo" >LetCare</a>
+            <nav class="navbar">
+                <a href="index.html">home</a>
+                <a href="index.html">services</a>
+                <a href="index.html">about</a>
+                <a href="index.html">doctors</a>
+                <a href="index.html">book</a>
+                <a href="index.html">review</a>
+                <a href="index.html">blogs</a>
+                <a href="login.html" class="btn">login</a>
+                <a href="signup.html" class="btn">signup</a>
+            </nav>
+            <div id="menu-btn" class="fas fa-bars"></div>
+        </header>
+        </div>
+        <!--header section ends-->
+    
+
+<div class="img">
+  <section id="signup" class="form-section">
+        <h2>  <img src="assets/logoo.png" alt="">Letcare Login</h2>
+        <form id="signupForm">
+            <div class="form-group">
+                <label for="name">Full Name/Email ID</label>
+                <input type="text" id="name" name="name" placeholder="enter your name/email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="enter your passcode" required>
+            </div>
+            <p class="forgot-password"><a href="forgot-password.html">Forgot Password?</a></p>
+            
+            <button type="submit">Login</button>
+            <p class="dont">Don't have an account? <a href="signup.html" id="showLogin">signup</a></p>
+        </form>
+        <div id="message"></div>
+    </section>
+  </div>
+<style>  
+body {
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;   
+}
+.form-section {
+    max-width: 400px;
+    margin: 210px  auto;
+    padding: 20px;
+    background: linear-gradient(to right, #f0f4f8, #d1e8e2);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.form-section img{
+background-size: cover;
+height: 40px;
+
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.forgot-password{
+  font-size: 1.4rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+h2{
+    font-size: 3rem;
+    font-weight: 1000;
+    color: var(--black);
+    text-shadow: var(--text-shadow);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+label{
+    font-size: 1.4rem;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+.dont {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-top: 15px; /* Added margin for spacing */
+}
+
+.dont a {
+    color: #4CAF50; /* Link color matches button */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text */
+}
+
+.dont a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+
+#message {
+    margin-top: 15px;
+    color: red;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #007bff;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+  .form-section {
+      margin: 100px 20px; /* Adjust margins for smaller screens */
+  }
+
+  h2 {
+      font-size: 2.5rem; /* Smaller heading on mobile */
+  }
+
+  .form-group label, .dont {
+      font-size: 1.2rem; /* Smaller font size for labels and text */
+  }
+
+  button {
+      padding: 8px; /* Smaller button padding */
+  }
+  
+}
+
+@media (max-width: 480px) {
+  h2 {
+      font-size: 2rem; /* Even smaller heading on very small screens */
+  }
+
+  .form-group input {
+      padding: 8px; /* Smaller input padding */
+  }
+
+  button {
+      font-size: 1rem; /* Adjust button font size */
+  }
+
+  .forgot-password, .dont {
+      font-size: 1rem; /* Smaller font size for links */
+  }
+}
+</style>
+
+<script>
+    const loginButton = document.querySelector('button[type="submit"]');
+    const loginForm = document.querySelector('form');
+    
+    loginButton.addEventListener('click', (e) => {
+      e.preventDefault();
+    
+      // Get all input fields in the form
+      const inputFields = loginForm.querySelectorAll('input');
+    
+      // Check if all input fields are filled
+      let allFieldsFilled = true;
+      inputFields.forEach((field) => {
+        if (field.value === '') {
+          allFieldsFilled = false;
+        }
+      });
+    
+      if (allFieldsFilled) {
+        // Redirect to the home page
+        window.location.href = 'index.html';
+      } else {
+        // Display an error message
+        alert('Please fill in all fields.');
+      }
+    });
+</script>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+       
