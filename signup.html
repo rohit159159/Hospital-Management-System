@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LetCare Signup</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <!--header section starts -->
+      <div class="background">
+        <header class="header">
+            <img src="assets/logoo.png" alt="">
+            <a href="#" class="logo" >LetCare</a>
+            <nav class="navbar">
+                <a href="index.html">home</a>
+                <a href="index.html">services</a>
+                <a href="index.html">about</a>
+                <a href="index.html">doctors</a>
+                <a href="index.html">book</a>
+                <a href="index.html">review</a>
+                <a href="index.html">blogs</a>
+                <a href="login.html" class="btn">login</a>
+                <a href="signup.html" class="btn">signup</a>
+            </nav>
+            <div id="menu-btn" class="fas fa-bars"></div>
+        </header>
+        </div>
+        <!--header section ends-->
+    
+
+    <section id="signup" class="form-section">
+        <h2><img src="assets/logoo.png" alt="">Letcare signup</h2>
+        <form id="signupForm">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="enter your passcode" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="confirm passscode" required>
+            </div>
+            <p class="forgot-password"><a href="forgot-password.html">Forgot Password?</a></p>
+            
+            <button type="submit">Sign Up</button>
+            <p class="already">Already have an account? <a href="login.html" id="showLogin">Login</a></p>
+        </form>
+        <div id="message"></div>
+    </section>
+
+<style>  
+body {
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+.header .logo{
+    font-size: 3rem;
+    font-weight: 1000;
+    color: var(--black);
+    text-shadow: var(--text-shadow);
+   margin-right: 300px; 
+}
+.form-section {
+    max-width: 400px;
+    margin: 140px  auto;
+    padding: 20px;
+    background: linear-gradient(to right, #f0f4f8, #d1e8e2);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.form-section img{
+    background-size: cover;
+    height: 40px;
+    
+    }
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.forgot-password{
+    text-align: center;
+    line-height: 2rem;
+    font-size: 1.3rem;
+    margin-bottom: .7rem;
+}
+h2{
+    font-size: 3rem;
+    font-weight: 1000;
+    color: var(--black);
+    text-shadow: var(--text-shadow);
+}
+label{
+    font-size: 1.4rem;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+.already {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-top: 15px; /* Added margin for spacing */
+}
+
+.already a {
+    color: #4CAF50; /* Link color matches button */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text */
+}
+
+.already a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+
+#message {
+    margin-top: 15px;
+    color: red;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #007bff;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+</style>
+
+
+<script>
+    const signupButton = document.querySelector('button[type="submit"]');
+    const signupForm = document.querySelector('form');
+    
+    signupButton.addEventListener('click', (e) => {
+      e.preventDefault();
+    
+      // Get the form data
+      const formData = new FormData(signupForm);
+    
+      // Check if the form is filled
+      if (formData.get('username') !== '' && formData.get('email') !== '' && formData.get('password') !== '') {
+        // Redirect to the home page
+        window.location.href = 'index.html';
+      } else {
+        // Display an error message
+        alert('Please fill in all fields.');
+      }
+    });
+
+
+document.getElementById('signupForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirm-password').value;
+    const messageDiv = document.getElementById('message');
+
+    if (password !== confirmPassword) {
+        messageDiv.textContent = "Passwords do not match!";
+    } else {
+        messageDiv.textContent = "Signup successful!";
+        // Here you can add code to handle the form submission, e.g., sending data to a server
+    }
+});
+</script>
+
+    <script src="script.js"></script>
+</body>
+</html>
