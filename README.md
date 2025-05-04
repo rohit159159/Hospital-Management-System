@@ -1,6 +1,7 @@
 # Hospital-Management-System built using HTML, CSS, and JavaScript to provide a user-friendly interface for managing hospital operations like patient records, doctor details, and appointment scheduling.
 
 # Structure of web-page
+ 🚀 Live Demo-🔗 [View Live Site on Netlify](http://letcare-hospital.netlify.app)
 ![image](https://github.com/rohit159159/Hospital-Management-System/blob/cbd6ef9b79413ea47ead3856b9d2083c83ff93c5/Screenshot%202025-05-03%20182805.png)
 # 🛠️ Technologies Used
 
