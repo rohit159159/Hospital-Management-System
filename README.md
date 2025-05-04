@@ -5,11 +5,13 @@
 ![image](https://github.com/rohit159159/Hospital-Management-System/blob/cbd6ef9b79413ea47ead3856b9d2083c83ff93c5/Screenshot%202025-05-03%20182805.png)
 # 🛠️ Technologies Used
 
-HTML – Structure and layout of the application.<br>
+**HTML** – Structure and layout of the application.<br>
 
-CSS – Styling and responsive design using Flexbox & Grid..<br>
+**CSS** – Styling and responsive design using Flexbox & Grid..<br>
 
-JavaScript – Dynamic UI interactions and client-side form validation..<br>
+**JavaScript** – Dynamic UI interactions and client-side form validation..<br>
+
+**Netlify** – Hosting and deployment <br>
 
 
 # 🚀 Features
